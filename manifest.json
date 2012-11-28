@@ -1,6 +1,6 @@
 {
   "name": "Maxtabs",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Allows you to have a maximum (default 15) number of tabs open. After that, clicking on links to open new tabs or opening new windows with new URLs will cause the URL to be remembered but not displayed.  When you reduce your number of open tabs, stored URLs will be automatically re-opened in new tabs.",
   "update_url": "https://fluiddb.fluidinfo.com/about/maxtabs/fluidinfo.com/chrome-update.xml",
   "manifest_version": 2,

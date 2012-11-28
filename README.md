@@ -10,11 +10,14 @@ The extension installs a (right-click) context menu that lets you disable
 it. When the extension is disabled, all saved URLs will immediately be
 re-opened in the order they were originally clicked.
 
-When the extension starts, if you have too many tabs open it will close as
-many tabs as needed (choosing the right-most tabs in your window(s)) to get
-you down to the maximum number.  The URLs for tabs that are closed will be
-remembered and restored once you further reduce the number of open tabs you
-have.
+Note that the extension starts in the disabled state so as not to surprise
+users when it starts removing excess tabs.
+
+When the extension is enabled (via the context menu), if you have too many
+tabs open it will close as many tabs as needed (choosing the right-most
+tabs in your window(s)) to get you down to the maximum number.  The URLs
+for tabs that are closed will be remembered and restored once you further
+reduce the number of open tabs you have.
 
 ## Why?
 

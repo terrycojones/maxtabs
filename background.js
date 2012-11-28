@@ -1,5 +1,5 @@
 var MT = {
-    enabled: true,
+    enabled: false,
     maxTabs: 15,
     urls: [],
 
@@ -121,8 +121,8 @@ var MT = {
         }.bind(this));
 
         this.menuItem = chrome.contextMenus.create({
-            checked: true,
-            title: 'Enabled. 0 URLs saved.',
+            checked: false,
+            title: 'Disabled, click to enable',
             contexts: ['all'],
             type: 'checkbox',
             onclick : function(info, tab){
@@ -132,7 +132,7 @@ var MT = {
                     this.removeTabs();
                 }
                 else {
-                    // Deactivated. Restore all tabs.
+                    // Deactivated. Restore any saved tabs.
                     this.restoreTabs({
                         restoreAll: true
                     });
