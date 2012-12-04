@@ -8,7 +8,8 @@ var MT = {
             chrome.contextMenus.update(
                 this.menuItem, {
                     checked: true,
-                    title: 'Enabled, ' + this.urls.length + ' URL' + (this.urls.length === 1 ? '' : 's') + ' saved.'
+                    title: 'Enabled, ' + this.urls.length + ' URL' + (this.urls.length === 1 ? '' : 's') + ' saved.',
+                    type: 'checkbox'
                 }
             );
         }
@@ -16,7 +17,8 @@ var MT = {
             chrome.contextMenus.update(
                 this.menuItem, {
                     checked: false,
-                    title: 'Disabled, click to enable'
+                    title: 'Disabled, click to enable',
+                    type: 'checkbox'
                 }
             );
         }
@@ -124,7 +126,6 @@ var MT = {
         }.bind(this));
 
         this.menuItem = chrome.contextMenus.create({
-            checked: false,
             title: 'Disabled, click to enable',
             contexts: ['all'],
             type: 'checkbox',
