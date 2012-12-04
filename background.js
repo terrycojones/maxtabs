@@ -104,7 +104,10 @@ var MT = {
     },
 
     init: function(){
-        this.removeTabs();
+        // Remove tabs on startup, if we're enabled by default.
+        if (this.enabled){
+            this.removeTabs();
+        }
 
         chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
             if (this.enabled && changeInfo.status === 'loading'){
